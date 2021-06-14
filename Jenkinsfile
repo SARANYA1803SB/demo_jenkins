@@ -7,9 +7,10 @@ pipeline {
         stage('build') {
             steps {
 			echo 'Build started'
-                sh 'mvn --version'
-	        sh 'mvn clean compile'
-	        sh 'mvn test'
+                bat 'mvn --version'
+	        bat 'mvn clean compile'
+		echo 'Build compiled succesfully'
+	        bat 'mvn test'
 	        echo 'Build finished Succesfully'
             }
         }
